@@ -1,8 +1,6 @@
-console.log("script.js connected!");
-
 let answers = [];
 
-const questionBlock = document.querySelectorAll(".question-block");
+const questionBlocks = document.querySelectorAll(".question-block");
 
 questionBlocks.forEach((block, index) => {
     const buttons = block.querySelectorAll(".answer-btn");
@@ -59,4 +57,7 @@ function displayResult() {
 
     document.getElementById("result-container").style.display = "block";
     document.getElementById("result-text").textContent = resultText;
+
 }
+
+document.getElementById("show-result").addEventListener("click", displayResult);
